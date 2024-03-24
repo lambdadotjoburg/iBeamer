@@ -39,20 +39,19 @@ const plugin: JupyterFrontEndPlugin<void> = {
     widget.addClass(ilambda_Anchor_CSS_CLASS);
 
     // add the widget to the DOM
-    app.shell.add(widget, 'top', {rank: 1000}); // rank - move widget to right-most position in top area panel
+    app.shell.add(widget, 'top', {rank: 1000}); // rank - move widget to right-most position in top area panel    
     
-    // Add the element to the DOM in any case
-    let logos = document.getElementsByClassName(ilambda_Anchor_CSS_CLASS);
-    console.log(logos);
+    // let logos = document.getElementsByClassName(ilambda_Anchor_CSS_CLASS);
+    // console.log(logos);
 
     // if there are multiple ilambda extensions installed,
     // each will contribute its own logo, so do the following
-    if (logos.length >= 2) {
-      // remove all the ilambda-logo widgets from the DOM, except the first
-      for (let i = 1; i < logos.length; i++) {
-        logos[i].remove();
-      }
-    }
+    // if (logos.length >= 2) {
+    //   // remove all the ilambda-logo widgets from the DOM, except the first
+    //   for (let i = 1; i < logos.length; i++) {
+    //     logos[i].remove();
+    //   }
+    // }
   }
 };
 
